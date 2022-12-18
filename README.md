@@ -1,14 +1,22 @@
 # Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+This Project was created for to learn angular and it's concepts.[Visit angular official website](https://angular.io/)
 
-## Development server
+## Setup and Installation - [visit setup doc](https://angular.io/guide/setup-local)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Run `npm install -g @angular/cli` for install angular globally in your machine.
 
-## Code scaffolding
+2. Run `ng new my-app` for install angular app and it's basic workplace folder.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. Run `ng my-app` for access workplace folder.
+
+4. Run `ng serve --open` for run app in default port in the browser. The default port is `http://localhost:4200/`
+
+
+
+
+
+<!-- Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -24,4 +32,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page. -->
