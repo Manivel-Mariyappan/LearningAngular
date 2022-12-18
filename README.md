@@ -2,6 +2,10 @@
 
 This Project was created for to learn angular and it's concepts.[Visit angular official website](https://angular.io/)
 
+# Angular RoadMap
+![angular learning path](https://user-images.githubusercontent.com/109149737/208310492-e0b12b31-d5e1-4118-98ce-ab5fea26edb0.jpg)
+
+
 ## Setup and Installation - [visit setup doc](https://angular.io/guide/setup-local)
 
 1. Run `npm install -g @angular/cli` for install angular globally in your machine.
