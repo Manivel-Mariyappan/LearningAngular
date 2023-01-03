@@ -3,6 +3,9 @@
     <div class="col-lg-12 sub_section">
         <h4 class="text-primary">Interpolation Example</h4>
         <p>This is {{componentName}} Component</p>
+
+
+        <p><label>Note</label> we can use this to bind the variable value to view. (Controller to HTML)</p>
     </div>
     
 
@@ -24,9 +27,24 @@
     </div>
 
     <div class="col-lg-12 sub_section">
+        <h4 class="text-primary">Two way binding</h4>
+        <input [(ngModel)]="Name" type="text" class="form-control">
+        {{Name | uppercase}}
+    </div>
+
+    <div class="col-lg-12 sub_section">
+      <h4 class="text-primary">Template Ref Variable</h4>
+
+      <div class="d-flex">
+        <input #firstName class="form-control" style="width:400px;margin-right:20px;" type="text" placeholder="firstName">
+        <button class="btn btn-primary btn-sm" (click)="submitName(firstName.value)">Click</button>
+      </div>
+   </div>
+
+    <div class="col-lg-12 sub_section">
         <h4 class="text-primary">For Loop example</h4>
         <ul>
-            <li *ngFor="let number of numbers">{{number}}</li>
+            <li *ngFor="let number of numbers"><a [ngStyle]="{color:'red'}">{{number}}</a></li>
         </ul>
     </div>
 
@@ -43,14 +61,12 @@
             </thead>
             <tbody>
               <tr *ngFor="let user of users">
-                <td>{{user.name}}</td>
+                <td>{{user.name | uppercase}}</td>
                 <td>{{user.email}}</td>
                 <td>{{user.address.street}},{{user.address.suite}},{{user.address.city}},{{user.address.zipcode}}</td>
               </tr>
             </tbody>
           </table>
     </div>
-
-
 
 </div>

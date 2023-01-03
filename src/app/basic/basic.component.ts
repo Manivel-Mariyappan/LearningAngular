@@ -12,6 +12,7 @@ export class BasicComponent {
   showText: boolean = true;
   numbers:string[] = ['one','two','three','four','five','six','seven'];
   users:any = users;
+  Name:string='mani';
 
   showHideText = () => {
     console.log('Button Clicked');
@@ -20,6 +21,10 @@ export class BasicComponent {
 
   showHide() {
    this.showText = !this.showText;
+  }
+
+  submitName(value:string) {
+    console.log(value);
   }
 
 }
