@@ -17,6 +17,24 @@ This Project was created for to learn angular and it's concepts.[Visit angular o
 4. Run `ng serve --open` for run app in default port in the browser. The default port is `http://localhost:4200/`
 
 
+## Basic Fundamentals
+<br/>
+
+### CLI for create component
+  Run `ng generate component component-name` or `ng g c component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`
+<br/>
+
+### Bootstrap Comment
+1. Run `npm install bootstrap@latest --save` for install bootstrap in your application.
+
+2. `@import 'bootstrap/dist/css/bootstrap.min.css';` add this line to your application style.css file. Then ypou can use the classes.
+
+### Binding
+1.Property
+
+
+
+
 
 
 
