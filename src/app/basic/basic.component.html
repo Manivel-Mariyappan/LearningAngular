@@ -4,10 +4,25 @@
         <h4 class="text-primary">Interpolation Example</h4>
         <p>This is {{componentName}} Component</p>
 
-
-        <p><label>Note</label> we can use this to bind the variable value to view. (Controller to HTML)</p>
+        <div class="info_section">
+          <p>we can use this to bind the variable value to view. (Controller to HTML)</p>
+        </div>
     </div>
     
+    <div class="col-lg-12 sub_section">
+      <h4 class="text-primary">Property binding Example</h4>
+      <button class="btn btn-sm me-2" [ngClass]="!showText ? 'btn-secondary' : 'btn-primary'" [disabled]="!showText" (click)="showHide()" >Hide Text</button>
+      <button class="btn btn-sm" [ngClass]="showText ? 'btn-secondary' : 'btn-primary'" [disabled]="showText" (click)="showHide()">Show Text</button>
+      <p class="text-danger" *ngIf="showText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, doloribus. 
+      Tempore debitis non maxime ullam, nam deleniti quae repudiandae, voluptas aut ut error autem, 
+      officiis quo quia possimus eligendi sequi</p>
+  </div>
+
+  <div class="col-lg-12 sub_section">
+    <h4 class="text-primary">Two way binding</h4>
+    <input [(ngModel)]="Name" type="text" class="form-control">
+    {{Name | uppercase}}
+  </div>
 
     <div class="col-lg-12 sub_section">
         <h4 class="text-primary">Event Example</h4>
@@ -15,21 +30,6 @@
         <p class="text-danger" *ngIf="showTextSection">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, doloribus. 
         Tempore debitis non maxime ullam, nam deleniti quae repudiandae, voluptas aut ut error autem, 
         officiis quo quia possimus eligendi sequi</p>
-    </div>
-
-    <div class="col-lg-12 sub_section">
-        <h4 class="text-primary">Property binding Example</h4>
-        <button class="btn btn-sm me-2" [ngClass]="!showText ? 'btn-secondary' : 'btn-primary'" [disabled]="!showText" (click)="showHide()" >Hide Text</button>
-        <button class="btn btn-sm" [ngClass]="showText ? 'btn-secondary' : 'btn-primary'" [disabled]="showText" (click)="showHide()">Show Text</button>
-        <p class="text-danger" *ngIf="showText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, doloribus. 
-        Tempore debitis non maxime ullam, nam deleniti quae repudiandae, voluptas aut ut error autem, 
-        officiis quo quia possimus eligendi sequi</p>
-    </div>
-
-    <div class="col-lg-12 sub_section">
-        <h4 class="text-primary">Two way binding</h4>
-        <input [(ngModel)]="Name" type="text" class="form-control">
-        {{Name | uppercase}}
     </div>
 
     <div class="col-lg-12 sub_section">

@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
 
 .container-fluid{
     padding:0px !important;
@@ -12,4 +13,16 @@
     padding:20px;
     margin:20px 0;
     border:1px solid #d0d0d0;
+}
+.info_section{
+    background-color: #d6f0e0;
+    color: #0d6831;
+    border-color: #c0e7d0;
+    padding:10px;
+    font-size:14px;
+    font-family: 'Roboto', sans-serif;
+    border-radius:4px;
+}
+.info_section p{
+    margin:0px !important;
 }

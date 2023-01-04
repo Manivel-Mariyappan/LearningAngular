@@ -29,8 +29,18 @@ This Project was created for to learn angular and it's concepts.[Visit angular o
 
 2. `@import 'bootstrap/dist/css/bootstrap.min.css';` add this line to your application style.css file. Then ypou can use the classes.
 
-### Binding
-1.Property
+### Basic
+1. Interpolation
+2. Property Binding
+3. Event Binding
+4. Two way binding
+5. Pipes
+6. Template Refference variable
+7. ngIf
+8. ngFor
+9. ngClass
+10. ngstyle
+
 
 
 
