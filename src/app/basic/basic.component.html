@@ -1,0 +1,72 @@
+<div class="col-lg-12 basic_fundamentals">
+
+    <div class="col-lg-12 sub_section">
+        <h4 class="text-primary">Interpolation Example</h4>
+        <p>This is {{componentName}} Component</p>
+
+        <div class="info_section">
+          <p>we can use this to bind the variable value to view. (Controller to HTML)</p>
+        </div>
+    </div>
+    
+    <div class="col-lg-12 sub_section">
+      <h4 class="text-primary">Property binding Example</h4>
+      <button class="btn btn-sm me-2" [ngClass]="!showText ? 'btn-secondary' : 'btn-primary'" [disabled]="!showText" (click)="showHide()" >Hide Text</button>
+      <button class="btn btn-sm" [ngClass]="showText ? 'btn-secondary' : 'btn-primary'" [disabled]="showText" (click)="showHide()">Show Text</button>
+      <p class="text-danger" *ngIf="showText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, doloribus. 
+      Tempore debitis non maxime ullam, nam deleniti quae repudiandae, voluptas aut ut error autem, 
+      officiis quo quia possimus eligendi sequi</p>
+  </div>
+
+  <div class="col-lg-12 sub_section">
+    <h4 class="text-primary">Two way binding</h4>
+    <input [(ngModel)]="Name" type="text" class="form-control">
+    {{Name | uppercase}}
+  </div>
+
+    <div class="col-lg-12 sub_section">
+        <h4 class="text-primary">Event Example</h4>
+        <button class="btn btn-primary btn-sm" (click)="showHideText()">show hide below text</button>
+        <p class="text-danger" *ngIf="showTextSection">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, doloribus. 
+        Tempore debitis non maxime ullam, nam deleniti quae repudiandae, voluptas aut ut error autem, 
+        officiis quo quia possimus eligendi sequi</p>
+    </div>
+
+    <div class="col-lg-12 sub_section">
+      <h4 class="text-primary">Template Ref Variable</h4>
+
+      <div class="d-flex">
+        <input #firstName class="form-control" style="width:400px;margin-right:20px;" type="text" placeholder="firstName">
+        <button class="btn btn-primary btn-sm" (click)="submitName(firstName.value)">Click</button>
+      </div>
+   </div>
+
+    <div class="col-lg-12 sub_section">
+        <h4 class="text-primary">For Loop example</h4>
+        <ul>
+            <li *ngFor="let number of numbers"><a [ngStyle]="{color:'red'}">{{number}}</a></li>
+        </ul>
+    </div>
+
+    <div class="col-lg-12 sub_section">
+        <h4 class="text-primary">JSON Object Sample</h4>
+        <!-- {{users | json}} -->
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td>{{user.name | uppercase}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.address.street}},{{user.address.suite}},{{user.address.city}},{{user.address.zipcode}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+</div>
