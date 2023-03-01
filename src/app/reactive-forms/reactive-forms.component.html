@@ -1,0 +1,82 @@
+<div class="col-lg-12 my-4">
+
+    <form [formGroup]="profileForm" (ngSubmit)="check()">
+        <div class="row">
+            <div class="col-lg-6">
+
+                <div class="mb-3">
+                    <label for="FirstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="FirstName" formControlName="firstName">
+                    <div style="color:red">Looks good!</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="LastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="LastName" formControlName="lastName">
+                    <div class="invalid-feedback">Looks good!</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" formControlName="email">
+                    <div class="invalid-feedback">Looks good!</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="phone" formControlName="phone">
+                    <div class="invalid-feedback">Looks good!</div>
+                </div>
+
+                <div class="mb-3 d-flex">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="radio" name="gender" id="male">
+                        <label class="form-check-label" for="male">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="radio" name="gender" id="female"
+                            checked>
+                        <label class="form-check-label" for="female">
+                            Female
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" formGroupName="addressInfo">
+                <div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" formControlName="address">
+                        <div class="invalid-feedback">Looks good!</div>
+                    </div>
+                  
+                    <div class="mb-3">
+                        <label for="City" class="form-label">City</label>
+                        <input type="text" class="form-control" id="City" formControlName="city">
+                        <div class="invalid-feedback">Looks good!</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="state" class="form-label">State</label>
+                        <input type="text" class="form-control" id="state" formControlName="state">
+                        <div class="invalid-feedback">Looks good!</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="zipcode" class="form-label">Zip code</label>
+                        <input type="text" class="form-control" id="zipcode" formControlName="zipCode">
+                        <div class="invalid-feedback">Looks good!</div>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary align-end">Submit</button>
+            </div>
+        </div>
+        {{profileForm.value | json}}
+    </form>
+
+</div>
